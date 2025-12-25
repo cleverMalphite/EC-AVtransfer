@@ -66,6 +66,7 @@ include client/CMakeFiles/rtsp_client_gui_autogen_timestamp_deps.dir/compiler_de
 # Include the progress variables for this target.
 include client/CMakeFiles/rtsp_client_gui_autogen_timestamp_deps.dir/progress.make
 
+client/CMakeFiles/rtsp_client_gui_autogen_timestamp_deps: 3rdparty/whisper/src/libwhisper.so.1.7.5
 client/CMakeFiles/rtsp_client_gui_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.13
 client/CMakeFiles/rtsp_client_gui_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.13
 client/CMakeFiles/rtsp_client_gui_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.13

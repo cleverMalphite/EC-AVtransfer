@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -Wall -O2 -g -O3 -DNDEBUG -shared -Wl,-soname,libwhisper.so.1 -o libwhisper.so.1.7.5 CMakeFiles/whisper.dir/whisper.cpp.o  -Wl,-rpath,/home/itzhou/rstp/VideoTransfer/build/3rdparty/whisper/ggml/src: ../ggml/src/libggml.so ../ggml/src/libggml-cpu.so ../ggml/src/libggml-base.so 

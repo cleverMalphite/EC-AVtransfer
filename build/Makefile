@@ -162,6 +162,58 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named ggml-base
+
+# Build rule for target.
+ggml-base: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ggml-base
+.PHONY : ggml-base
+
+# fast build rule for target.
+ggml-base/fast:
+	$(MAKE) $(MAKESILENT) -f 3rdparty/whisper/ggml/src/CMakeFiles/ggml-base.dir/build.make 3rdparty/whisper/ggml/src/CMakeFiles/ggml-base.dir/build
+.PHONY : ggml-base/fast
+
+#=============================================================================
+# Target rules for targets named ggml
+
+# Build rule for target.
+ggml: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ggml
+.PHONY : ggml
+
+# fast build rule for target.
+ggml/fast:
+	$(MAKE) $(MAKESILENT) -f 3rdparty/whisper/ggml/src/CMakeFiles/ggml.dir/build.make 3rdparty/whisper/ggml/src/CMakeFiles/ggml.dir/build
+.PHONY : ggml/fast
+
+#=============================================================================
+# Target rules for targets named ggml-cpu
+
+# Build rule for target.
+ggml-cpu: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ggml-cpu
+.PHONY : ggml-cpu
+
+# fast build rule for target.
+ggml-cpu/fast:
+	$(MAKE) $(MAKESILENT) -f 3rdparty/whisper/ggml/src/CMakeFiles/ggml-cpu.dir/build.make 3rdparty/whisper/ggml/src/CMakeFiles/ggml-cpu.dir/build
+.PHONY : ggml-cpu/fast
+
+#=============================================================================
+# Target rules for targets named whisper
+
+# Build rule for target.
+whisper: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 whisper
+.PHONY : whisper
+
+# fast build rule for target.
+whisper/fast:
+	$(MAKE) $(MAKESILENT) -f 3rdparty/whisper/src/CMakeFiles/whisper.dir/build.make 3rdparty/whisper/src/CMakeFiles/whisper.dir/build
+.PHONY : whisper/fast
+
+#=============================================================================
 # Target rules for targets named rtsp_client
 
 # Build rule for target.
@@ -240,9 +292,13 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... rtsp_client_gui_autogen"
 	@echo "... rtsp_client_gui_autogen_timestamp_deps"
+	@echo "... ggml"
+	@echo "... ggml-base"
+	@echo "... ggml-cpu"
 	@echo "... rtsp_client"
 	@echo "... rtsp_client_gui"
 	@echo "... rtsp_client_legacy"
+	@echo "... whisper"
 .PHONY : help
 
 

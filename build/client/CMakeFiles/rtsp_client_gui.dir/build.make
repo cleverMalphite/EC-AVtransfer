@@ -131,12 +131,42 @@ client/CMakeFiles/rtsp_client_gui.dir/qt_client/videothread.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/rtsp_client_gui.dir/qt_client/videothread.cpp.s"
 	cd /home/itzhou/rstp/VideoTransfer/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/itzhou/rstp/VideoTransfer/client/qt_client/videothread.cpp -o CMakeFiles/rtsp_client_gui.dir/qt_client/videothread.cpp.s
 
+client/CMakeFiles/rtsp_client_gui.dir/qt_client/audiovisualizer.cpp.o: client/CMakeFiles/rtsp_client_gui.dir/flags.make
+client/CMakeFiles/rtsp_client_gui.dir/qt_client/audiovisualizer.cpp.o: /home/itzhou/rstp/VideoTransfer/client/qt_client/audiovisualizer.cpp
+client/CMakeFiles/rtsp_client_gui.dir/qt_client/audiovisualizer.cpp.o: client/CMakeFiles/rtsp_client_gui.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/itzhou/rstp/VideoTransfer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object client/CMakeFiles/rtsp_client_gui.dir/qt_client/audiovisualizer.cpp.o"
+	cd /home/itzhou/rstp/VideoTransfer/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/rtsp_client_gui.dir/qt_client/audiovisualizer.cpp.o -MF CMakeFiles/rtsp_client_gui.dir/qt_client/audiovisualizer.cpp.o.d -o CMakeFiles/rtsp_client_gui.dir/qt_client/audiovisualizer.cpp.o -c /home/itzhou/rstp/VideoTransfer/client/qt_client/audiovisualizer.cpp
+
+client/CMakeFiles/rtsp_client_gui.dir/qt_client/audiovisualizer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/rtsp_client_gui.dir/qt_client/audiovisualizer.cpp.i"
+	cd /home/itzhou/rstp/VideoTransfer/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/itzhou/rstp/VideoTransfer/client/qt_client/audiovisualizer.cpp > CMakeFiles/rtsp_client_gui.dir/qt_client/audiovisualizer.cpp.i
+
+client/CMakeFiles/rtsp_client_gui.dir/qt_client/audiovisualizer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/rtsp_client_gui.dir/qt_client/audiovisualizer.cpp.s"
+	cd /home/itzhou/rstp/VideoTransfer/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/itzhou/rstp/VideoTransfer/client/qt_client/audiovisualizer.cpp -o CMakeFiles/rtsp_client_gui.dir/qt_client/audiovisualizer.cpp.s
+
+client/CMakeFiles/rtsp_client_gui.dir/qt_client/asrworker.cpp.o: client/CMakeFiles/rtsp_client_gui.dir/flags.make
+client/CMakeFiles/rtsp_client_gui.dir/qt_client/asrworker.cpp.o: /home/itzhou/rstp/VideoTransfer/client/qt_client/asrworker.cpp
+client/CMakeFiles/rtsp_client_gui.dir/qt_client/asrworker.cpp.o: client/CMakeFiles/rtsp_client_gui.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/itzhou/rstp/VideoTransfer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object client/CMakeFiles/rtsp_client_gui.dir/qt_client/asrworker.cpp.o"
+	cd /home/itzhou/rstp/VideoTransfer/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT client/CMakeFiles/rtsp_client_gui.dir/qt_client/asrworker.cpp.o -MF CMakeFiles/rtsp_client_gui.dir/qt_client/asrworker.cpp.o.d -o CMakeFiles/rtsp_client_gui.dir/qt_client/asrworker.cpp.o -c /home/itzhou/rstp/VideoTransfer/client/qt_client/asrworker.cpp
+
+client/CMakeFiles/rtsp_client_gui.dir/qt_client/asrworker.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/rtsp_client_gui.dir/qt_client/asrworker.cpp.i"
+	cd /home/itzhou/rstp/VideoTransfer/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/itzhou/rstp/VideoTransfer/client/qt_client/asrworker.cpp > CMakeFiles/rtsp_client_gui.dir/qt_client/asrworker.cpp.i
+
+client/CMakeFiles/rtsp_client_gui.dir/qt_client/asrworker.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/rtsp_client_gui.dir/qt_client/asrworker.cpp.s"
+	cd /home/itzhou/rstp/VideoTransfer/build/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/itzhou/rstp/VideoTransfer/client/qt_client/asrworker.cpp -o CMakeFiles/rtsp_client_gui.dir/qt_client/asrworker.cpp.s
+
 # Object files for target rtsp_client_gui
 rtsp_client_gui_OBJECTS = \
 "CMakeFiles/rtsp_client_gui.dir/rtsp_client_gui_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/rtsp_client_gui.dir/qt_client/main.cpp.o" \
 "CMakeFiles/rtsp_client_gui.dir/qt_client/mainwindow.cpp.o" \
-"CMakeFiles/rtsp_client_gui.dir/qt_client/videothread.cpp.o"
+"CMakeFiles/rtsp_client_gui.dir/qt_client/videothread.cpp.o" \
+"CMakeFiles/rtsp_client_gui.dir/qt_client/audiovisualizer.cpp.o" \
+"CMakeFiles/rtsp_client_gui.dir/qt_client/asrworker.cpp.o"
 
 # External object files for target rtsp_client_gui
 rtsp_client_gui_EXTERNAL_OBJECTS =
@@ -145,12 +175,18 @@ client/rtsp_client_gui: client/CMakeFiles/rtsp_client_gui.dir/rtsp_client_gui_au
 client/rtsp_client_gui: client/CMakeFiles/rtsp_client_gui.dir/qt_client/main.cpp.o
 client/rtsp_client_gui: client/CMakeFiles/rtsp_client_gui.dir/qt_client/mainwindow.cpp.o
 client/rtsp_client_gui: client/CMakeFiles/rtsp_client_gui.dir/qt_client/videothread.cpp.o
+client/rtsp_client_gui: client/CMakeFiles/rtsp_client_gui.dir/qt_client/audiovisualizer.cpp.o
+client/rtsp_client_gui: client/CMakeFiles/rtsp_client_gui.dir/qt_client/asrworker.cpp.o
 client/rtsp_client_gui: client/CMakeFiles/rtsp_client_gui.dir/build.make
 client/rtsp_client_gui: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.13
 client/rtsp_client_gui: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.13
+client/rtsp_client_gui: 3rdparty/whisper/src/libwhisper.so.1.7.5
 client/rtsp_client_gui: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.13
+client/rtsp_client_gui: 3rdparty/whisper/ggml/src/libggml.so
+client/rtsp_client_gui: 3rdparty/whisper/ggml/src/libggml-cpu.so
+client/rtsp_client_gui: 3rdparty/whisper/ggml/src/libggml-base.so
 client/rtsp_client_gui: client/CMakeFiles/rtsp_client_gui.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/itzhou/rstp/VideoTransfer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable rtsp_client_gui"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/itzhou/rstp/VideoTransfer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable rtsp_client_gui"
 	cd /home/itzhou/rstp/VideoTransfer/build/client && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rtsp_client_gui.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

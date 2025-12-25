@@ -1,10 +1,10 @@
-2025/12/25 11:17:43 INF MediaMTX v1.5.0
-2025/12/25 11:17:43 INF configuration loaded from /home/itzhou/rstp/VideoTransfer/mediamtx.yml
-2025/12/25 11:17:43 INF [RTSP] listener opened on :8554 (TCP), :8000 (UDP/RTP), :8001 (UDP/RTCP)
-2025/12/25 11:17:43 INF [RTMP] listener opened on :1935
-2025/12/25 11:17:43 INF [HLS] listener opened on :8888
-2025/12/25 11:17:43 INF [WebRTC] listener opened on :8889 (HTTP), :8189 (ICE/UDP)
-2025/12/25 11:17:43 INF [SRT] listener opened on :8890 (UDP)
-2025/12/25 11:17:45 INF [RTSP] [conn 127.0.0.1:45010] opened
-2025/12/25 11:17:45 INF [RTSP] [session a24ada64] created by 127.0.0.1:45010
-2025/12/25 11:17:45 INF [RTSP] [session a24ada64] is publishing to path 'live', 1 track (H264)
+2025/12/25 16:32:58 INF MediaMTX v1.5.0
+2025/12/25 16:32:58 INF configuration loaded from /home/itzhou/rstp/VideoTransfer/mediamtx.yml
+2025/12/25 16:32:58 INF [RTSP] listener opened on :8554 (TCP), :8000 (UDP/RTP), :8001 (UDP/RTCP)
+2025/12/25 16:32:58 INF [RTMP] listener opened on :1935
+2025/12/25 16:32:58 INF [HLS] listener opened on :8888
+2025/12/25 16:32:58 INF [WebRTC] listener opened on :8889 (HTTP), :8189 (ICE/UDP)
+2025/12/25 16:32:58 INF [SRT] listener opened on :8890 (UDP)
+2025/12/25 16:33:01 INF [RTSP] [conn 127.0.0.1:41376] opened
+2025/12/25 16:33:01 INF [RTSP] [session 33cfed1b] created by 127.0.0.1:41376
+2025/12/25 16:33:01 INF [RTSP] [session 33cfed1b] is publishing to path 'live', 1 track (H264)

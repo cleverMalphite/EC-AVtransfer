@@ -59,6 +59,18 @@
 	"HEADERS" : 
 	[
 		[
+			"/home/itzhou/rstp/VideoTransfer/client/qt_client/asrworker.h",
+			"Mu",
+			"MZIFQG6BJB/moc_asrworker.cpp",
+			null
+		],
+		[
+			"/home/itzhou/rstp/VideoTransfer/client/qt_client/audiovisualizer.h",
+			"Mu",
+			"MZIFQG6BJB/moc_audiovisualizer.cpp",
+			null
+		],
+		[
 			"/home/itzhou/rstp/VideoTransfer/client/qt_client/mainwindow.h",
 			"Mu",
 			"MZIFQG6BJB/moc_mainwindow.cpp",
@@ -74,7 +86,16 @@
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "/home/itzhou/rstp/VideoTransfer/build/client/rtsp_client_gui_autogen/include",
 	"MOC_COMPILATION_FILE" : "/home/itzhou/rstp/VideoTransfer/build/client/rtsp_client_gui_autogen/mocs_compilation.cpp",
-	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_NO_DEBUG", "QT_WIDGETS_LIB" ],
+	"MOC_DEFINITIONS" : 
+	[
+		"GGML_BACKEND_SHARED",
+		"GGML_SHARED",
+		"GGML_USE_CPU",
+		"QT_CORE_LIB",
+		"QT_GUI_LIB",
+		"QT_NO_DEBUG",
+		"QT_WIDGETS_LIB"
+	],
 	"MOC_DEPEND_FILTERS" : 
 	[
 		[
@@ -85,6 +106,9 @@
 	"MOC_INCLUDES" : 
 	[
 		"/usr/include/opencv4",
+		"/home/itzhou/rstp/VideoTransfer/3rdparty/whisper/src",
+		"/home/itzhou/rstp/VideoTransfer/3rdparty/whisper/include",
+		"/home/itzhou/rstp/VideoTransfer/3rdparty/whisper/ggml/include",
 		"/usr/include/x86_64-linux-gnu/qt5",
 		"/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
 		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
@@ -123,6 +147,16 @@
 	"SETTINGS_FILE" : "/home/itzhou/rstp/VideoTransfer/build/client/CMakeFiles/rtsp_client_gui_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[
+			"/home/itzhou/rstp/VideoTransfer/client/qt_client/asrworker.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/itzhou/rstp/VideoTransfer/client/qt_client/audiovisualizer.cpp",
+			"Mu",
+			null
+		],
 		[
 			"/home/itzhou/rstp/VideoTransfer/client/qt_client/main.cpp",
 			"Mu",

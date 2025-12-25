@@ -231,6 +231,54 @@ rtsp_client_gui_autogen/fast:
 	cd /home/itzhou/rstp/VideoTransfer/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/rtsp_client_gui_autogen.dir/build.make client/CMakeFiles/rtsp_client_gui_autogen.dir/build
 .PHONY : rtsp_client_gui_autogen/fast
 
+qt_client/asrworker.o: qt_client/asrworker.cpp.o
+.PHONY : qt_client/asrworker.o
+
+# target to build an object file
+qt_client/asrworker.cpp.o:
+	cd /home/itzhou/rstp/VideoTransfer/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/rtsp_client_gui.dir/build.make client/CMakeFiles/rtsp_client_gui.dir/qt_client/asrworker.cpp.o
+.PHONY : qt_client/asrworker.cpp.o
+
+qt_client/asrworker.i: qt_client/asrworker.cpp.i
+.PHONY : qt_client/asrworker.i
+
+# target to preprocess a source file
+qt_client/asrworker.cpp.i:
+	cd /home/itzhou/rstp/VideoTransfer/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/rtsp_client_gui.dir/build.make client/CMakeFiles/rtsp_client_gui.dir/qt_client/asrworker.cpp.i
+.PHONY : qt_client/asrworker.cpp.i
+
+qt_client/asrworker.s: qt_client/asrworker.cpp.s
+.PHONY : qt_client/asrworker.s
+
+# target to generate assembly for a file
+qt_client/asrworker.cpp.s:
+	cd /home/itzhou/rstp/VideoTransfer/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/rtsp_client_gui.dir/build.make client/CMakeFiles/rtsp_client_gui.dir/qt_client/asrworker.cpp.s
+.PHONY : qt_client/asrworker.cpp.s
+
+qt_client/audiovisualizer.o: qt_client/audiovisualizer.cpp.o
+.PHONY : qt_client/audiovisualizer.o
+
+# target to build an object file
+qt_client/audiovisualizer.cpp.o:
+	cd /home/itzhou/rstp/VideoTransfer/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/rtsp_client_gui.dir/build.make client/CMakeFiles/rtsp_client_gui.dir/qt_client/audiovisualizer.cpp.o
+.PHONY : qt_client/audiovisualizer.cpp.o
+
+qt_client/audiovisualizer.i: qt_client/audiovisualizer.cpp.i
+.PHONY : qt_client/audiovisualizer.i
+
+# target to preprocess a source file
+qt_client/audiovisualizer.cpp.i:
+	cd /home/itzhou/rstp/VideoTransfer/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/rtsp_client_gui.dir/build.make client/CMakeFiles/rtsp_client_gui.dir/qt_client/audiovisualizer.cpp.i
+.PHONY : qt_client/audiovisualizer.cpp.i
+
+qt_client/audiovisualizer.s: qt_client/audiovisualizer.cpp.s
+.PHONY : qt_client/audiovisualizer.s
+
+# target to generate assembly for a file
+qt_client/audiovisualizer.cpp.s:
+	cd /home/itzhou/rstp/VideoTransfer/build && $(MAKE) $(MAKESILENT) -f client/CMakeFiles/rtsp_client_gui.dir/build.make client/CMakeFiles/rtsp_client_gui.dir/qt_client/audiovisualizer.cpp.s
+.PHONY : qt_client/audiovisualizer.cpp.s
+
 qt_client/main.o: qt_client/main.cpp.o
 .PHONY : qt_client/main.o
 
@@ -392,6 +440,12 @@ help:
 	@echo "... rtsp_client"
 	@echo "... rtsp_client_gui"
 	@echo "... rtsp_client_legacy"
+	@echo "... qt_client/asrworker.o"
+	@echo "... qt_client/asrworker.i"
+	@echo "... qt_client/asrworker.s"
+	@echo "... qt_client/audiovisualizer.o"
+	@echo "... qt_client/audiovisualizer.i"
+	@echo "... qt_client/audiovisualizer.s"
 	@echo "... qt_client/main.o"
 	@echo "... qt_client/main.i"
 	@echo "... qt_client/main.s"

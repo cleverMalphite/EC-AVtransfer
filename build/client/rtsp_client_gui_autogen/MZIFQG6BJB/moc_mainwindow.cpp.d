@@ -1,5 +1,7 @@
 /home/itzhou/rstp/VideoTransfer/build/client/rtsp_client_gui_autogen/MZIFQG6BJB/moc_mainwindow.cpp: /home/itzhou/rstp/VideoTransfer/client/qt_client/mainwindow.h \
   /home/itzhou/rstp/VideoTransfer/build/client/rtsp_client_gui_autogen/moc_predefs.h \
+  /home/itzhou/rstp/VideoTransfer/client/qt_client/asrworker.h \
+  /home/itzhou/rstp/VideoTransfer/client/qt_client/audiovisualizer.h \
   /home/itzhou/rstp/VideoTransfer/client/qt_client/videothread.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -297,12 +299,20 @@
   /usr/include/x86_64-linux-gnu/libavutil/rational.h \
   /usr/include/x86_64-linux-gnu/libavutil/samplefmt.h \
   /usr/include/x86_64-linux-gnu/libavutil/version.h \
+  /usr/include/x86_64-linux-gnu/libswresample/swresample.h \
+  /usr/include/x86_64-linux-gnu/libswresample/version.h \
+  /usr/include/x86_64-linux-gnu/libswresample/version_major.h \
   /usr/include/x86_64-linux-gnu/libswscale/swscale.h \
   /usr/include/x86_64-linux-gnu/libswscale/version.h \
   /usr/include/x86_64-linux-gnu/libswscale/version_major.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QByteArray \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QDeadlineTimer \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QMutex \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QProcess \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QThread \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QVector \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QWaitCondition \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h \
@@ -371,6 +381,7 @@
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qvarlengtharray.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qversiontagging.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qwaitcondition.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/QImage \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qcolor.h \
@@ -410,8 +421,10 @@
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QRadioButton \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSplitter \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QStackedLayout \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTextEdit \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h \
@@ -429,6 +442,7 @@
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qradiobutton.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsplitter.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstackedlayout.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtextedit.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h \

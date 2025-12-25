@@ -108,6 +108,7 @@
 #define __gnu_linux__ 1
 #define __INT16_MAX__ 0x7fff
 #define __FLT64_MIN_EXP__ (-1021)
+#define GGML_USE_CPU 1
 #define __FLT64X_MIN_10_EXP__ (-4931)
 #define __LDBL_HAS_QUIET_NAN__ 1
 #define __FLT16_MIN_EXP__ (-13)
@@ -359,6 +360,7 @@
 #define __FLT64_MAX_EXP__ 1024
 #define __SIZEOF_WCHAR_T__ 4
 #define __GNUC_PATCHLEVEL__ 0
+#define GGML_BACKEND_SHARED 1
 #define __FLT128_NORM_MAX__ 1.18973149535723176508575932662800702e+4932F128
 #define __FLT64_NORM_MAX__ 1.79769313486231570814527423731704357e+308F64
 #define __FLT128_HAS_QUIET_NAN__ 1
@@ -418,6 +420,7 @@
 #define __STDC__ 1
 #define __PTRDIFF_TYPE__ long int
 #define __FLT32X_MIN_10_EXP__ (-307)
+#define GGML_SHARED 1
 #define __UINTPTR_TYPE__ long unsigned int
 #define __DEC64_SUBNORMAL_MIN__ 0.000000000000001E-383DD
 #define __DEC128_MANT_DIG__ 34

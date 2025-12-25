@@ -18,6 +18,7 @@ pkg_check_modules(AVCODEC REQUIRED libavcodec)
 pkg_check_modules(AVFORMAT REQUIRED libavformat)
 pkg_check_modules(AVUTIL REQUIRED libavutil)
 pkg_check_modules(SWSCALE REQUIRED libswscale)
+pkg_check_modules(SWRESAMPLE REQUIRED libswresample)
 
 # OpenCV库
 pkg_check_modules(OPENCV REQUIRED opencv4)
@@ -28,6 +29,7 @@ include_directories(
     ${AVFORMAT_INCLUDE_DIRS}
     ${AVUTIL_INCLUDE_DIRS}
     ${SWSCALE_INCLUDE_DIRS}
+    ${SWRESAMPLE_INCLUDE_DIRS}
     ${OPENCV_INCLUDE_DIRS}
 )
 
@@ -37,8 +39,14 @@ link_directories(
     ${AVFORMAT_LIBRARY_DIRS}
     ${AVUTIL_LIBRARY_DIRS}
     ${SWSCALE_LIBRARY_DIRS}
+    ${SWRESAMPLE_LIBRARY_DIRS}
     ${OPENCV_LIBRARY_DIRS}
 )
+
+# Whisper.cpp options
+set(WHISPER_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
+set(WHISPER_BUILD_TESTS OFF CACHE BOOL "" FORCE)
+add_subdirectory(3rdparty/whisper)
 
 # 客户端程序
 add_subdirectory(client)

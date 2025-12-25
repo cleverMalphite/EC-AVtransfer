@@ -34,6 +34,10 @@ set(QT_CLIENT_SOURCES
     qt_client/main.cpp
     qt_client/mainwindow.cpp
     qt_client/videothread.cpp
+    qt_client/audiovisualizer.cpp
+    qt_client/audiovisualizer.h
+    qt_client/asrworker.cpp
+    qt_client/asrworker.h
 )
 
 # 需要打开 AUTOMOC 处理 Q_OBJECT
@@ -51,7 +55,9 @@ target_link_libraries(rtsp_client_gui
     ${AVCODEC_LIBRARIES}
     ${AVUTIL_LIBRARIES}
     ${SWSCALE_LIBRARIES}
+    ${SWRESAMPLE_LIBRARIES}
     ${OPENCV_LIBRARIES}
+    whisper
 )
 
 # 安装客户端程序

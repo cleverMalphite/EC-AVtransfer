@@ -255,9 +255,13 @@
   /usr/include/x86_64-linux-gnu/libavutil/rational.h \
   /usr/include/x86_64-linux-gnu/libavutil/samplefmt.h \
   /usr/include/x86_64-linux-gnu/libavutil/version.h \
+  /usr/include/x86_64-linux-gnu/libswresample/swresample.h \
+  /usr/include/x86_64-linux-gnu/libswresample/version.h \
+  /usr/include/x86_64-linux-gnu/libswresample/version_major.h \
   /usr/include/x86_64-linux-gnu/libswscale/swscale.h \
   /usr/include/x86_64-linux-gnu/libswscale/version.h \
   /usr/include/x86_64-linux-gnu/libswscale/version_major.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QByteArray \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QMutex \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QThread \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \

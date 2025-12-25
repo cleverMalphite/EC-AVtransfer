@@ -44,6 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+  include("/home/itzhou/rstp/VideoTransfer/build/3rdparty/whisper/cmake_install.cmake")
   include("/home/itzhou/rstp/VideoTransfer/build/client/cmake_install.cmake")
 
 endif()

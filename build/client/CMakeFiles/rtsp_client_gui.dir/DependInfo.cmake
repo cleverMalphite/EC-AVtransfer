@@ -9,6 +9,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "" "client/rtsp_client_gui_autogen/timestamp" "custom" "client/rtsp_client_gui_autogen/deps"
+  "/home/itzhou/rstp/VideoTransfer/client/qt_client/asrworker.cpp" "client/CMakeFiles/rtsp_client_gui.dir/qt_client/asrworker.cpp.o" "gcc" "client/CMakeFiles/rtsp_client_gui.dir/qt_client/asrworker.cpp.o.d"
+  "/home/itzhou/rstp/VideoTransfer/client/qt_client/audiovisualizer.cpp" "client/CMakeFiles/rtsp_client_gui.dir/qt_client/audiovisualizer.cpp.o" "gcc" "client/CMakeFiles/rtsp_client_gui.dir/qt_client/audiovisualizer.cpp.o.d"
   "/home/itzhou/rstp/VideoTransfer/client/qt_client/main.cpp" "client/CMakeFiles/rtsp_client_gui.dir/qt_client/main.cpp.o" "gcc" "client/CMakeFiles/rtsp_client_gui.dir/qt_client/main.cpp.o.d"
   "/home/itzhou/rstp/VideoTransfer/client/qt_client/mainwindow.cpp" "client/CMakeFiles/rtsp_client_gui.dir/qt_client/mainwindow.cpp.o" "gcc" "client/CMakeFiles/rtsp_client_gui.dir/qt_client/mainwindow.cpp.o.d"
   "/home/itzhou/rstp/VideoTransfer/client/qt_client/videothread.cpp" "client/CMakeFiles/rtsp_client_gui.dir/qt_client/videothread.cpp.o" "gcc" "client/CMakeFiles/rtsp_client_gui.dir/qt_client/videothread.cpp.o.d"

@@ -5,12 +5,14 @@
 #include <QImage>
 #include <QMutex>
 #include <string>
+#include <QByteArray>
 
 extern "C" {
 #include <libavcodec/avcodec.h>
 #include <libavformat/avformat.h>
 #include <libavutil/imgutils.h>
 #include <libswscale/swscale.h>
+#include <libswresample/swresample.h>
 }
 
 class VideoThread : public QThread
@@ -24,6 +26,7 @@ public:
 
 signals:
     void frameReady(const QImage &image);
+    void audioDataReady(const QByteArray &data);
     void errorOccurred(const QString &msg);
     void statsUpdated(int frameCount, double fps);
 
@@ -36,12 +39,20 @@ private:
     QMutex mutex_;
 
     AVFormatContext* formatCtx_;
-    AVCodecContext* codecCtx_;
-    const AVCodec* codec_;
+    
+    // Video
+    AVCodecContext* vCodecCtx_;
+    const AVCodec* vCodec_;
     SwsContext* swsCtx_;
     int videoStreamIndex_;
     int frameCount_;
-    
+
+    // Audio
+    AVCodecContext* aCodecCtx_;
+    const AVCodec* aCodec_;
+    SwrContext* swrCtx_;
+    int audioStreamIndex_;
+
     void cleanup();
 };
 

@@ -15,8 +15,11 @@
 #include <QGroupBox>
 #include <QFrame>
 #include <QSplitter>
+#include <QStackedLayout>
 
 #include "videothread.h"
+#include "audiovisualizer.h"
+#include "asrworker.h"
 
 class MainWindow : public QMainWindow
 {
@@ -33,6 +36,10 @@ private slots:
     void updateStats(int frameCount, double fps);
     void handleError(const QString &msg);
     void processOutput();
+    
+    // New Slots
+    void onAudioDataReady(const QByteArray &data);
+    void onSpeechRecognized(QString text);
 
 private:
     void setupUi();
@@ -63,9 +70,15 @@ private:
     QPushButton *btnToggle; // Start/Stop button
     
     // Right Area
+    QFrame *rightPanel;
     QFrame *videoContainer;
+    QStackedLayout *displayLayout; // Switch between Video and Visualizer
     QLabel *videoLabel;
+    AudioVisualizer *audioVisualizer;
     QLabel *videoOverlayText; // For "No Signal" or Loading
+    
+    // Subtitle
+    // QLabel *subtitleLabel; // Removed as per request
     
     // Status & Log
     QFrame *statusBar;
@@ -76,6 +89,7 @@ private:
     
     // Logic
     VideoThread *videoThread;
+    AsrWorker *asrWorker;
     QProcess *mediaMtxProcess;
     QProcess *ffmpegProcess;
     QProcess *playerProcess; 

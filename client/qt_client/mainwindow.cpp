@@ -12,7 +12,7 @@
 #include <QStringList>
 
 MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent), videoThread(nullptr), 
+    : QMainWindow(parent), videoThread(nullptr), asrWorker(nullptr),
       mediaMtxProcess(nullptr), ffmpegProcess(nullptr), playerProcess(nullptr),
       isRunning(false)
 {
@@ -20,10 +20,20 @@ MainWindow::MainWindow(QWidget *parent)
     applyStyles();
     setWindowTitle("音视频传输客户端");
     resize(1200, 800);
+
+    // Initialize ASR Worker
+    asrWorker = new AsrWorker(this);
+    connect(asrWorker, &AsrWorker::speechRecognized, this, &MainWindow::onSpeechRecognized);
+    connect(asrWorker, &AsrWorker::logMessage, this, &MainWindow::log);
+    asrWorker->start();
 }
 
 MainWindow::~MainWindow()
 {
+    if (asrWorker) {
+        asrWorker->stop();
+        asrWorker->wait();
+    }
     stopAll();
 }
 
@@ -163,7 +173,7 @@ void MainWindow::setupUi()
     leftLayout->addWidget(btnToggle);
 
     // --- Right Area (Video + Status) ---
-    QFrame *rightPanel = new QFrame(this);
+    rightPanel = new QFrame(this);
     rightPanel->setObjectName("RightPanel");
     QVBoxLayout *rightLayout = new QVBoxLayout(rightPanel);
     rightLayout->setContentsMargins(20, 20, 20, 20);
@@ -172,17 +182,32 @@ void MainWindow::setupUi()
     // Video Container
     videoContainer = new QFrame(this);
     videoContainer->setObjectName("VideoContainer");
-    QVBoxLayout *videoLayout = new QVBoxLayout(videoContainer);
-    videoLayout->setContentsMargins(0, 0, 0, 0);
+    
+    // Use Stacked Layout for Video and Visualizer
+    displayLayout = new QStackedLayout(videoContainer);
+    displayLayout->setStackingMode(QStackedLayout::StackOne);
+    videoContainer->setLayout(displayLayout); // Set layout explicitly if not done by constructor
 
+    // Page 0: Video
     videoLabel = new QLabel(this);
     videoLabel->setAlignment(Qt::AlignCenter);
     videoLabel->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-    videoLayout->addWidget(videoLabel);
+    displayLayout->addWidget(videoLabel);
     
-    videoOverlayText = new QLabel("NO SIGNAL", videoLabel);
+    // Page 1: Audio Visualizer
+    audioVisualizer = new AudioVisualizer(this);
+    displayLayout->addWidget(audioVisualizer);
+    
+    // Overlay Text (Manually positioned or added to layout on top?)
+    // StackedLayout shows one widget at a time.
+    // If we want overlay text on top of video, we might need a different approach 
+    // or just make videoOverlayText a child of videoLabel (as it was) 
+    // AND create another one for audioVisualizer if needed, or handle it differently.
+    // For simplicity, let's keep videoOverlayText as child of videoContainer and raise it.
+    videoOverlayText = new QLabel("NO SIGNAL", videoContainer);
     videoOverlayText->setAlignment(Qt::AlignCenter);
     videoOverlayText->setStyleSheet("color: rgba(255,255,255,0.3); font-size: 24px; font-weight: bold;");
+    videoOverlayText->resize(800, 600); // Initial size, should be resized in resizeEvent
     
     rightLayout->addWidget(videoContainer, 1); // Stretch factor 1
 
@@ -492,6 +517,9 @@ void MainWindow::startVideoMode()
     QString url = urlInput->text().trimmed();
     QString file = fileInput->text().trimmed();
     
+    // Switch to Video Page
+    displayLayout->setCurrentIndex(0);
+
     ffmpegProcess = new QProcess(this);
     QStringList args;
     args << "-re" << "-stream_loop" << "-1" << "-i" << file
@@ -528,6 +556,9 @@ void MainWindow::startAudioMode()
     QString url = urlInput->text().trimmed();
     QString file = fileInput->text().trimmed();
     
+    // Switch to Audio Page
+    displayLayout->setCurrentIndex(1);
+
     ffmpegProcess = new QProcess(this);
     QStringList args;
     args << "-re" << "-stream_loop" << "-1" << "-i" << file
@@ -545,10 +576,17 @@ void MainWindow::startAudioMode()
     }
 
     setStatus("AUDIO STREAMING", "#A6E3A1");
-    videoOverlayText->setText("AUDIO ONLY MODE");
+    videoOverlayText->setText("AUDIO VISUALIZATION");
 
     QThread::msleep(1500);
 
+    // Start VideoThread (handling Audio) instead of ffplay
+    videoThread = new VideoThread(url, this);
+    connect(videoThread, &VideoThread::audioDataReady, this, &MainWindow::onAudioDataReady);
+    connect(videoThread, &VideoThread::errorOccurred, this, &MainWindow::handleError);
+    videoThread->start();
+
+    // Start ffplay in background for sound output (optional, but good for demo)
     playerProcess = new QProcess(this);
     QStringList playerArgs;
     playerArgs << "-nodisp" << "-autoexit" << url;
@@ -595,6 +633,9 @@ void MainWindow::stopAll()
     videoLabel->clear();
     videoOverlayText->setText("NO SIGNAL");
     videoOverlayText->raise(); // Make sure overlay is visible
+    // Center overlay text manually since it's child of container now
+    videoOverlayText->setGeometry(videoContainer->rect());
+    
     fpsLabel->clear();
     
     isRunning = false;
@@ -651,4 +692,29 @@ void MainWindow::processOutput()
              log("FFmpeg: " + output.trimmed());
         }
     }
+}
+
+void MainWindow::onAudioDataReady(const QByteArray &data)
+{
+    // Feed to Visualizer
+    if (audioVisualizer && displayLayout->currentIndex() == 1) {
+        audioVisualizer->pushAudioData(data.constData(), data.size());
+    }
+
+    // Feed to ASR
+    if (asrWorker) {
+        asrWorker->receiveAudio(data.constData(), data.size());
+    }
+}
+
+void MainWindow::onSpeechRecognized(QString text)
+{
+    // Append recognized text to miniLog with custom styling
+    QString timestamp = QDateTime::currentDateTime().toString("HH:mm:ss");
+    miniLog->append(QString("<span style='color:#FAB387;'>[%1] [ASR] %2</span>").arg(timestamp, text));
+    
+    // Auto scroll
+    QTextCursor c = miniLog->textCursor();
+    c.movePosition(QTextCursor::End);
+    miniLog->setTextCursor(c);
 }
