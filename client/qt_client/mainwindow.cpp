@@ -8,6 +8,8 @@
 #include <QFormLayout>
 #include <QPainter>
 #include <QPainterPath>
+#include <QCoreApplication>
+#include <QStringList>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), videoThread(nullptr), 
@@ -55,11 +57,22 @@ void MainWindow::setupUi()
     brandImagePlaceholder->setAlignment(Qt::AlignCenter);
     
     // Load Logo
-    QString logoPath = "pic/EClogo.png";
-    if (!QFile::exists(logoPath)) logoPath = "../pic/EClogo.png";
-    if (!QFile::exists(logoPath)) logoPath = "/home/itzhou/rstp/VideoTransfer/pic/EClogo.png";
+    QString logoPath;
+    QStringList logoCandidates;
+    logoCandidates << QDir::current().filePath("pic/EClogo.png");
+    logoCandidates << QDir(QCoreApplication::applicationDirPath()).filePath("pic/EClogo.png");
+    logoCandidates << QDir(QCoreApplication::applicationDirPath()).filePath("../pic/EClogo.png");
+    logoCandidates << QDir(QCoreApplication::applicationDirPath()).filePath("../../pic/EClogo.png");
+    logoCandidates << QDir(QCoreApplication::applicationDirPath()).filePath("../../../pic/EClogo.png");
+
+    for (const QString &p : logoCandidates) {
+        if (QFile::exists(p)) {
+            logoPath = QDir::cleanPath(p);
+            break;
+        }
+    }
     
-    if (QFile::exists(logoPath)) {
+    if (!logoPath.isEmpty()) {
         QPixmap logo(logoPath);
         if (!logo.isNull()) {
             auto makeRoundedCover = [](const QPixmap &src, const QSize &size, int radius) {

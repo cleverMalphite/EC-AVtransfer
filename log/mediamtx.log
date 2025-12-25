@@ -1,23 +1,10 @@
-2025/12/24 17:50:50 INF MediaMTX v1.5.0
-2025/12/24 17:50:50 INF configuration loaded from /home/itzhou/rstp/VideoTransfer/mediamtx.yml
-2025/12/24 17:50:50 INF [RTSP] listener opened on :8554 (TCP), :8000 (UDP/RTP), :8001 (UDP/RTCP)
-2025/12/24 17:50:50 INF [RTMP] listener opened on :1935
-2025/12/24 17:50:50 INF [HLS] listener opened on :8888
-2025/12/24 17:50:50 INF [WebRTC] listener opened on :8889 (HTTP), :8189 (ICE/UDP)
-2025/12/24 17:50:50 INF [SRT] listener opened on :8890 (UDP)
-2025/12/24 17:50:53 INF [RTSP] [conn 127.0.0.1:57654] opened
-2025/12/24 17:50:53 INF [RTSP] [session 2ba34a15] created by 127.0.0.1:57654
-2025/12/24 17:50:53 INF [RTSP] [session 2ba34a15] is publishing to path 'live', 1 track (H264)
-2025/12/24 17:51:10 INF [RTSP] [conn 127.0.0.1:40650] opened
-2025/12/24 17:51:10 INF [RTSP] [session 6281e22d] created by 127.0.0.1:40650
-2025/12/24 17:51:10 INF [path live] closing existing publisher
-2025/12/24 17:51:10 INF [RTSP] [conn 127.0.0.1:57654] closed: terminated
-2025/12/24 17:51:10 INF [RTSP] [session 2ba34a15] destroyed: terminated
-2025/12/24 17:51:10 INF [RTSP] [session 6281e22d] is publishing to path 'live', 1 track (MPEG-4 Audio)
-2025/12/24 17:51:11 INF [RTSP] [conn 127.0.0.1:40664] opened
-2025/12/24 17:51:11 INF [RTSP] [session 74dde9ad] created by 127.0.0.1:40664
-2025/12/24 17:51:11 INF [RTSP] [session 74dde9ad] is reading from path 'live', with UDP, 1 track (MPEG-4 Audio)
-2025/12/24 17:51:32 INF [RTSP] [session 6281e22d] destroyed: torn down by 127.0.0.1:40650
-2025/12/24 17:51:32 INF [RTSP] [conn 127.0.0.1:40664] closed: terminated
-2025/12/24 17:51:32 INF [RTSP] [session 74dde9ad] destroyed: terminated
-2025/12/24 17:51:32 INF [RTSP] [conn 127.0.0.1:40650] closed: EOF
+2025/12/25 11:17:43 INF MediaMTX v1.5.0
+2025/12/25 11:17:43 INF configuration loaded from /home/itzhou/rstp/VideoTransfer/mediamtx.yml
+2025/12/25 11:17:43 INF [RTSP] listener opened on :8554 (TCP), :8000 (UDP/RTP), :8001 (UDP/RTCP)
+2025/12/25 11:17:43 INF [RTMP] listener opened on :1935
+2025/12/25 11:17:43 INF [HLS] listener opened on :8888
+2025/12/25 11:17:43 INF [WebRTC] listener opened on :8889 (HTTP), :8189 (ICE/UDP)
+2025/12/25 11:17:43 INF [SRT] listener opened on :8890 (UDP)
+2025/12/25 11:17:45 INF [RTSP] [conn 127.0.0.1:45010] opened
+2025/12/25 11:17:45 INF [RTSP] [session a24ada64] created by 127.0.0.1:45010
+2025/12/25 11:17:45 INF [RTSP] [session a24ada64] is publishing to path 'live', 1 track (H264)

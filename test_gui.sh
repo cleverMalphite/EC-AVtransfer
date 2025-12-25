@@ -45,9 +45,21 @@ echo ""
 
 echo "步骤2: 启动推流"
 echo "--------------------------------------"
+
+FFMPEG_BIN=${FFMPEG_BIN:-ffmpeg}
+if ! command -v "$FFMPEG_BIN" >/dev/null 2>&1; then
+    echo "错误: FFmpeg启动失败"
+    echo "原因: 未找到命令: $FFMPEG_BIN"
+    echo "请先安装FFmpeg，或设置环境变量 FFMPEG_BIN 指向ffmpeg可执行文件。"
+    echo "  Ubuntu/Debian: sudo apt-get update && sudo apt-get install -y ffmpeg"
+    echo "  CentOS/RHEL:   sudo yum install -y ffmpeg"
+    kill $MEDIAMTX_PID 2>/dev/null
+    exit 1
+fi
+
 # 4K视频需要转码降低分辨率，否则会卡顿
 echo "转码为720p以提高流畅度..."
-ffmpeg -re -stream_loop -1 -i example/testp4.mp4 \
+"$FFMPEG_BIN" -re -stream_loop -1 -i example/testp4.mp4 \
   -c:v libx264 \
   -preset ultrafast \
   -tune zerolatency \
