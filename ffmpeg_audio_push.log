@@ -1,0 +1,28 @@
+ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers
+  built with gcc 13 (Ubuntu 13.2.0-23ubuntu3)
+  configuration: --prefix=/usr --extra-version=3ubuntu5 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --disable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libjack --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-pocketsphinx --enable-librsvg --enable-libjxl --enable-shared
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+[aac @ 0x5ae25fd51000] Estimating duration from bitrate, this may be inaccurate
+Input #0, aac, from 'example/test.aac':
+  Duration: 00:00:29.68, bitrate: 72 kb/s
+  Stream #0:0: Audio: aac (LC), 44100 Hz, mono, fltp, 72 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+Output #0, rtsp, to 'rtsp://localhost:8554/audio':
+  Metadata:
+    encoder         : Lavf60.16.100
+  Stream #0:0: Audio: aac (LC), 44100 Hz, mono, fltp, 128 kb/s
+    Metadata:
+      encoder         : Lavc60.31.102 aac
+size=       0kB time=N/A bitrate=N/A speed=N/A    size=N/A time=00:00:00.99 bitrate=N/A speed=1.91x    size=N/A time=00:00:01.50 bitrate=N/A speed=1.46x    size=N/A time=00:00:02.02 bitrate=N/A speed=1.31x    size=N/A time=00:00:02.53 bitrate=N/A speed=1.23x    size=N/A time=00:00:03.04 bitrate=N/A speed=1.19x    size=N/A time=00:00:03.55 bitrate=N/A speed=1.15x    size=N/A time=00:00:04.06 bitrate=N/A speed=1.13x    size=N/A time=00:00:04.57 bitrate=N/A speed=1.12x    size=N/A time=00:00:05.08 bitrate=N/A speed= 1.1x    size=N/A time=00:00:05.59 bitrate=N/A speed=1.09x    size=N/A time=00:00:06.10 bitrate=N/A speed=1.08x    size=N/A time=00:00:06.61 bitrate=N/A speed=1.08x    size=N/A time=00:00:07.12 bitrate=N/A speed=1.07x    size=N/A time=00:00:07.63 bitrate=N/A speed=1.07x    size=N/A time=00:00:08.15 bitrate=N/A speed=1.06x    [out#0/rtsp @ 0x5ae25fd545c0] video:0kB audio:132kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+size=N/A time=00:00:08.47 bitrate=N/A speed=1.06x    
+[aac @ 0x5ae25fd71a00] Qavg: 8833.907
+Exiting normally, received signal 15.

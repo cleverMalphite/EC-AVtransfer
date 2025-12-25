@@ -1,0 +1,23 @@
+2025/12/23 16:45:16 INF MediaMTX v1.5.0
+2025/12/23 16:45:16 INF configuration loaded from /home/itzhou/rstp/VideoTransfer/mediamtx.yml
+2025/12/23 16:45:16 INF [RTSP] listener opened on :8554 (TCP), :8000 (UDP/RTP), :8001 (UDP/RTCP)
+2025/12/23 16:45:16 INF [RTMP] listener opened on :1935
+2025/12/23 16:45:16 INF [HLS] listener opened on :8888
+2025/12/23 16:45:16 INF [WebRTC] listener opened on :8889 (HTTP), :8189 (ICE/UDP)
+2025/12/23 16:45:16 INF [SRT] listener opened on :8890 (UDP)
+2025/12/23 16:45:19 INF [RTSP] [conn 127.0.0.1:40742] opened
+2025/12/23 16:45:19 INF [RTSP] [session d29e1675] created by 127.0.0.1:40742
+2025/12/23 16:45:19 INF [RTSP] [session d29e1675] is publishing to path 'live', 1 track (H264)
+2025/12/23 16:45:28 INF [RTSP] [conn 127.0.0.1:40744] opened
+2025/12/23 16:45:28 INF [RTSP] [session 3927f763] created by 127.0.0.1:40744
+2025/12/23 16:45:28 INF [path live] closing existing publisher
+2025/12/23 16:45:28 INF [RTSP] [conn 127.0.0.1:40742] closed: terminated
+2025/12/23 16:45:28 INF [RTSP] [session d29e1675] destroyed: terminated
+2025/12/23 16:45:28 INF [RTSP] [session 3927f763] is publishing to path 'live', 1 track (H264)
+2025/12/23 16:45:30 INF [RTSP] [conn 127.0.0.1:59676] opened
+2025/12/23 16:45:30 INF [RTSP] [session b90072d9] created by 127.0.0.1:59676
+2025/12/23 16:45:30 INF [RTSP] [session b90072d9] is reading from path 'live', with TCP, 1 track (H264)
+2025/12/23 16:45:48 INF [RTSP] [session b90072d9] destroyed: torn down by 127.0.0.1:59676
+2025/12/23 16:45:48 INF [RTSP] [conn 127.0.0.1:59676] closed: EOF
+2025/12/23 16:45:48 INF [RTSP] [session 3927f763] destroyed: torn down by 127.0.0.1:40744
+2025/12/23 16:45:48 INF [RTSP] [conn 127.0.0.1:40744] closed: EOF

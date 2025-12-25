@@ -1,0 +1,17 @@
+/home/itzhou/rstp/VideoTransfer/build/CMakeFiles/edit_cache.dir
+/home/itzhou/rstp/VideoTransfer/build/CMakeFiles/rebuild_cache.dir
+/home/itzhou/rstp/VideoTransfer/build/CMakeFiles/list_install_components.dir
+/home/itzhou/rstp/VideoTransfer/build/CMakeFiles/install.dir
+/home/itzhou/rstp/VideoTransfer/build/CMakeFiles/install/local.dir
+/home/itzhou/rstp/VideoTransfer/build/CMakeFiles/install/strip.dir
+/home/itzhou/rstp/VideoTransfer/build/client/CMakeFiles/rtsp_client.dir
+/home/itzhou/rstp/VideoTransfer/build/client/CMakeFiles/rtsp_client_legacy.dir
+/home/itzhou/rstp/VideoTransfer/build/client/CMakeFiles/rtsp_client_gui.dir
+/home/itzhou/rstp/VideoTransfer/build/client/CMakeFiles/edit_cache.dir
+/home/itzhou/rstp/VideoTransfer/build/client/CMakeFiles/rebuild_cache.dir
+/home/itzhou/rstp/VideoTransfer/build/client/CMakeFiles/list_install_components.dir
+/home/itzhou/rstp/VideoTransfer/build/client/CMakeFiles/install.dir
+/home/itzhou/rstp/VideoTransfer/build/client/CMakeFiles/install/local.dir
+/home/itzhou/rstp/VideoTransfer/build/client/CMakeFiles/install/strip.dir
+/home/itzhou/rstp/VideoTransfer/build/client/CMakeFiles/rtsp_client_gui_autogen_timestamp_deps.dir
+/home/itzhou/rstp/VideoTransfer/build/client/CMakeFiles/rtsp_client_gui_autogen.dir

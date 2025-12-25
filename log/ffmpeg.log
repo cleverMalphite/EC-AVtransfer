@@ -1,0 +1,62 @@
+ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers
+  built with gcc 13 (Ubuntu 13.2.0-23ubuntu3)
+  configuration: --prefix=/usr --extra-version=3ubuntu5 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --disable-omx --enable-gnutls --enable-libaom --enable-libass --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libgsm --enable-libharfbuzz --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-openal --enable-opencl --enable-opengl --disable-sndio --enable-libvpl --disable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-ladspa --enable-libbluray --enable-libjack --enable-libpulse --enable-librabbitmq --enable-librist --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libx264 --enable-libzmq --enable-libzvbi --enable-lv2 --enable-sdl2 --enable-libplacebo --enable-librav1e --enable-pocketsphinx --enable-librsvg --enable-libjxl --enable-shared
+  libavutil      58. 29.100 / 58. 29.100
+  libavcodec     60. 31.102 / 60. 31.102
+  libavformat    60. 16.100 / 60. 16.100
+  libavdevice    60.  3.100 / 60.  3.100
+  libavfilter     9. 12.100 /  9. 12.100
+  libswscale      7.  5.100 /  7.  5.100
+  libswresample   4. 12.100 /  4. 12.100
+  libpostproc    57.  3.100 / 57.  3.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'example/testp4.mp4':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 0
+    compatible_brands: mp42mp41isomavc1
+    creation_time   : 2020-02-17T15:57:55.000000Z
+  Duration: 00:00:17.77, start: 0.000000, bitrate: 14796 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 3840x2160, 14546 kb/s, 25 fps, 25 tbr, 25 tbn (default)
+    Metadata:
+      creation_time   : 2020-02-17T15:57:55.000000Z
+      handler_name    : L-SMASH Video Handler
+      vendor_id       : [0][0][0][0]
+      encoder         : AVC Coding
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 253 kb/s (default)
+    Metadata:
+      creation_time   : 2020-02-17T15:57:55.000000Z
+      handler_name    : L-SMASH Audio Handler
+      vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0x5a38b3a0b9c0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0x5a38b3a0b9c0] profile Constrained Baseline, level 3.1, 4:2:0, 8-bit
+[libx264 @ 0x5a38b3a0b9c0] 264 - core 164 r3108 31e19f9 - H.264/MPEG-4 AVC codec - Copyleft 2003-2023 - http://www.videolan.org/x264.html - options: cabac=0 ref=1 deblock=0:0:0 analyse=0:0 me=dia subme=0 psy=1 psy_rd=1.00:0.00 mixed_ref=0 me_range=16 chroma_me=1 trellis=0 8x8dct=0 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=0 threads=11 lookahead_threads=11 sliced_threads=1 slices=11 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=0 weightp=0 keyint=250 keyint_min=25 scenecut=0 intra_refresh=0 rc_lookahead=0 rc=cbr mbtree=0 bitrate=1000 ratetol=1.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 vbv_maxrate=1000 vbv_bufsize=2000 nal_hrd=none filler=0 ip_ratio=1.40 aq=0
+Output #0, rtsp, to 'rtsp://localhost:8554/live':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 0
+    compatible_brands: mp42mp41isomavc1
+    encoder         : Lavf60.16.100
+  Stream #0:0(und): Video: h264, yuv420p(tv, bt709, progressive), 1280x720, q=2-31, 1000 kb/s, 25 fps, 90k tbn (default)
+    Metadata:
+      creation_time   : 2020-02-17T15:57:55.000000Z
+      handler_name    : L-SMASH Video Handler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc60.31.102 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 1000000/0/1000000 buffer size: 2000000 vbv_delay: N/A
+frame=    0 fps=0.0 q=31.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=   15 fps=0.0 q=28.0 size=N/A time=00:00:00.60 bitrate=N/A speed=0.902x    frame=   28 fps= 24 q=27.0 size=N/A time=00:00:01.12 bitrate=N/A speed=0.944x    frame=   41 fps= 24 q=28.0 size=N/A time=00:00:01.64 bitrate=N/A speed=0.962x    frame=   54 fps= 24 q=27.0 size=N/A time=00:00:02.16 bitrate=N/A speed=0.97x    frame=   67 fps= 24 q=27.0 size=N/A time=00:00:02.68 bitrate=N/A speed=0.977x    frame=   80 fps= 25 q=27.0 size=N/A time=00:00:03.20 bitrate=N/A speed=0.98x    frame=   93 fps= 25 q=27.0 size=N/A time=00:00:03.72 bitrate=N/A speed=0.983x    frame=  106 fps= 25 q=27.0 size=N/A time=00:00:04.24 bitrate=N/A speed=0.983x    frame=  119 fps= 25 q=27.0 size=N/A time=00:00:04.76 bitrate=N/A speed=0.986x    frame=  132 fps= 25 q=28.0 size=N/A time=00:00:05.28 bitrate=N/A speed=0.988x    frame=  145 fps= 25 q=27.0 size=N/A time=00:00:05.80 bitrate=N/A speed=0.989x    frame=  159 fps= 25 q=27.0 size=N/A time=00:00:06.32 bitrate=N/A speed=0.99x    frame=  171 fps= 25 q=27.0 size=N/A time=00:00:06.84 bitrate=N/A speed=0.99x    frame=  184 fps= 25 q=27.0 size=N/A time=00:00:07.36 bitrate=N/A speed=0.991x    frame=  197 fps= 25 q=27.0 size=N/A time=00:00:07.88 bitrate=N/A speed=0.992x    frame=  210 fps= 25 q=27.0 size=N/A time=00:00:08.40 bitrate=N/A speed=0.992x    frame=  223 fps= 25 q=27.0 size=N/A time=00:00:08.92 bitrate=N/A speed=0.993x    frame=  236 fps= 25 q=27.0 size=N/A time=00:00:09.44 bitrate=N/A speed=0.993x    frame=  249 fps= 25 q=27.0 size=N/A time=00:00:09.96 bitrate=N/A speed=0.994x    frame=  262 fps= 25 q=28.0 size=N/A time=00:00:10.48 bitrate=N/A speed=0.994x    frame=  275 fps= 25 q=27.0 size=N/A time=00:00:11.00 bitrate=N/A speed=0.994x    frame=  288 fps= 25 q=28.0 size=N/A time=00:00:11.52 bitrate=N/A speed=0.994x    frame=  301 fps= 25 q=28.0 size=N/A time=00:00:12.04 bitrate=N/A speed=0.995x    frame=  314 fps= 25 q=28.0 size=N/A time=00:00:12.56 bitrate=N/A speed=0.995x    frame=  327 fps= 25 q=28.0 size=N/A time=00:00:13.08 bitrate=N/A speed=0.995x    frame=  340 fps= 25 q=28.0 size=N/A time=00:00:13.60 bitrate=N/A speed=0.995x    frame=  353 fps= 25 q=28.0 size=N/A time=00:00:14.12 bitrate=N/A speed=0.995x    frame=  366 fps= 25 q=27.0 size=N/A time=00:00:14.64 bitrate=N/A speed=0.995x    frame=  379 fps= 25 q=27.0 size=N/A time=00:00:15.16 bitrate=N/A speed=0.996x    frame=  392 fps= 25 q=27.0 size=N/A time=00:00:15.68 bitrate=N/A speed=0.996x    frame=  405 fps= 25 q=27.0 size=N/A time=00:00:16.20 bitrate=N/A speed=0.996x    frame=  418 fps= 25 q=27.0 size=N/A time=00:00:16.72 bitrate=N/A speed=0.996x    frame=  444 fps= 26 q=28.0 size=N/A time=00:00:17.72 bitrate=N/A speed=1.02x    frame=  444 fps= 25 q=30.0 size=N/A time=00:00:17.76 bitrate=N/A speed=0.997x    [vost#0:0/libx264 @ 0x5a38b3a0b700] Error submitting a packet to the muxer: Broken pipe
+[out#0/rtsp @ 0x5a38b39b0f40] Error muxing a packet
+[out#0/rtsp @ 0x5a38b39b0f40] video:2183kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+frame=  445 fps= 25 q=29.0 Lsize=N/A time=00:00:17.80 bitrate=N/A speed=0.993x    
+[libx264 @ 0x5a38b3a0b9c0] frame I:2     Avg QP:28.00  size: 17979
+[libx264 @ 0x5a38b3a0b9c0] frame P:444   Avg QP:27.59  size:  4962
+[libx264 @ 0x5a38b3a0b9c0] mb I  I16..4: 100.0%  0.0%  0.0%
+[libx264 @ 0x5a38b3a0b9c0] mb P  I16..4:  0.9%  0.0%  0.0%  P16..4:  5.4%  0.0%  0.0%  0.0%  0.0%    skip:93.6%
+[libx264 @ 0x5a38b3a0b9c0] coded y,uvDC,uvAC intra: 20.2% 33.5% 5.6% inter: 2.7% 1.5% 0.3%
+[libx264 @ 0x5a38b3a0b9c0] i16 v,h,dc,p: 27% 32% 28% 13%
+[libx264 @ 0x5a38b3a0b9c0] i8c dc,h,v,p: 56% 27% 11%  6%
+[libx264 @ 0x5a38b3a0b9c0] kb/s:1004.08
+Conversion failed!

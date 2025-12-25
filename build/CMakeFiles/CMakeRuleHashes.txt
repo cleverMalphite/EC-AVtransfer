@@ -1,0 +1,5 @@
+# Hashes of file build rules.
+17a5d547a13dad690a5ec5e8180da96d client/CMakeFiles/rtsp_client_gui_autogen
+17a5d547a13dad690a5ec5e8180da96d client/CMakeFiles/rtsp_client_gui_autogen_timestamp_deps
+c792975c35c6453c69e01398c4e81c10 client/rtsp_client_gui_autogen/timestamp
+9ebde96f0e3668e16389edfd12ed6090 client/rtsp_qt_client_autogen/timestamp

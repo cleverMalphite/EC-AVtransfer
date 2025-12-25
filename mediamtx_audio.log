@@ -1,0 +1,14 @@
+2025/12/23 16:53:23 INF MediaMTX v1.5.0
+2025/12/23 16:53:23 INF configuration loaded from /home/itzhou/rstp/VideoTransfer/mediamtx.yml
+2025/12/23 16:53:23 INF [RTSP] listener opened on :8554 (TCP), :8000 (UDP/RTP), :8001 (UDP/RTCP)
+2025/12/23 16:53:23 INF [RTMP] listener opened on :1935
+2025/12/23 16:53:23 INF [HLS] listener opened on :8888
+2025/12/23 16:53:23 INF [WebRTC] listener opened on :8889 (HTTP), :8189 (ICE/UDP)
+2025/12/23 16:53:23 INF [SRT] listener opened on :8890 (UDP)
+2025/12/23 16:53:25 INF [RTSP] [conn 127.0.0.1:43114] opened
+2025/12/23 16:53:26 INF [RTSP] [session 86e3b9a9] created by 127.0.0.1:43114
+2025/12/23 16:53:26 INF [RTSP] [session 86e3b9a9] is publishing to path 'audio', 1 track (MPEG-4 Audio)
+2025/12/23 16:53:28 INF [RTSP] [conn 127.0.0.1:43284] opened
+2025/12/23 16:53:28 INF [RTSP] [session ccd42a78] created by 127.0.0.1:43284
+2025/12/23 16:53:28 INF [RTSP] [session ccd42a78] is reading from path 'audio', with UDP, 1 track (MPEG-4 Audio)
+2025/12/23 16:53:33 INF [RTSP] [conn 127.0.0.1:43284] closed: EOF
